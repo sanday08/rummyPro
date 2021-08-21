@@ -1,0 +1,4 @@
+token =
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMTU2MDVmZmI0N2M4MWVlNTQ1YzcwYSIsInJvbGUiOiJVc2VyIiwibmFtZSI6ImFuaWwiLCJpYXQiOjE2Mjg3OTA4OTAsImV4cCI6MTYzMTM4Mjg5MH0.49CwME9IPCVSHla0nYPBt-K25iNJPOdrHJeSuGxM8Oc";
+token = token.split(" ")[1];
+console.log(token);
