@@ -34,7 +34,7 @@ let adminPer = 90;
 io.on("connection", (socket) => {
   //Join Event When Application is Start
   socket.on("join", async ({ token, gameName }) => {
-    console.log(token);
+    console.log(token, gameName);
     let user = await getUserInfoBytoken(token);
     let numbers = await getLastrecord(gameName, user._id);
     let gameData = await getCurrentBetData(gameName, user._id);
