@@ -132,7 +132,7 @@ setInterval(async () => {
   }
 
   //Get Admin Percentage
-  if (new Date().getMinutes() == 1) {
+  if (new Date().getMinutes() == 1 && new Date().getSeconds() == 1) {
     let p = await getAdminPer();
 
     winningPercent = p.percent;
@@ -177,7 +177,7 @@ getResultAndarBahar = async () => {
     console.log("Final Pahges : ", finalPages);
     result = finalPages.length % 2 == 0 ? "bahar" : "andar";
     centerCard = Math.round(Math.random() * 51) + 1;
-    console.log(gameName, " : - ", finalPages, Result);
+    console.log(gameName, " : - ", finalPages, result);
     io.in(gameName).emit("res", {
       data: {
         gameName,
