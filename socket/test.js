@@ -1,4 +1,15 @@
-token =
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMTU2MDVmZmI0N2M4MWVlNTQ1YzcwYSIsInJvbGUiOiJVc2VyIiwibmFtZSI6ImFuaWwiLCJpYXQiOjE2Mjg3OTA4OTAsImV4cCI6MTYzMTM4Mjg5MH0.49CwME9IPCVSHla0nYPBt-K25iNJPOdrHJeSuGxM8Oc";
-token = token.split(" ")[1];
-console.log(token);
+let games = {
+  parity: {
+    startTime: new Date().getTime() / 1000,
+    position: {},
+    adminBalance: 0,
+  },
+  andarBahar: {
+    startTime: new Date().getTime() / 1000,
+    position: {},
+    position: {},
+    adminBalance: 0,
+  },
+};
+let a = "andarBahar"
+console.log(games[a].startTime)

@@ -177,6 +177,7 @@ getResultAndarBahar = async () => {
     console.log("Final Pahges : ", finalPages);
     result = finalPages.length % 2 == 0 ? "bahar" : "andar";
     centerCard = Math.round(Math.random() * 51) + 1;
+    console.log(gameName, " : - ", finalPages, Result);
     io.in(gameName).emit("res", {
       data: {
         gameName,
