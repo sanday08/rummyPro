@@ -23,10 +23,7 @@ const BetSchema = new mongoose.Schema(
       enum: ["andarBahar", "parity"], //if you write admin than its display error "`admin` is not a valid enum value for path`role`".
       required: true
     },
-    ticketId: {
-      type: String,
-      required: true,
-    },
+
     bet: Number,
     winPosition: {
       type: String,
