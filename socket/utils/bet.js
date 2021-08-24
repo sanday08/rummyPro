@@ -3,7 +3,7 @@ const Bet = require("../../models/Bet");
 const WinResult = require("../../models/WinResult");
 const Winning = require("../../models/Winning");
 
-async function placeBet(userId, game, position, betPoint, adminPer) {
+async function placeBet(userId, game, position, betPoint) {
   //Verify Token
   try {
     let user = await User.findById(userId);
