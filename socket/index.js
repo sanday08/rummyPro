@@ -91,7 +91,7 @@ io.on("connection", (socket) => {
           games[gameName].adminBalance
         );
 
-        if (betPoint)
+        if (betPoint && betPoint != 0)
           games[gameName].adminBalance += (betPoint * adminPer) / 100;
 
         console.log(
