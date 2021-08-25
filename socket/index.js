@@ -19,7 +19,8 @@ let games = {
   andarBahar: {
     startTime: new Date().getTime() / 1000,
     position: {},
-    position: {},
+    andar: 0,
+    bahar: 0,
     adminBalance: 0,
   },
 };
@@ -147,23 +148,23 @@ getResultAndarBahar = async () => {
   gameName = "andarBahar";
 
   if (centerCard != 52) {
-    if (games.andarBahar.andarBet != 0 || games.andarBahar.baharBet != 0) {
+    if (games.andarBahar.andar != 0 || games.andarBahar.bahar != 0) {
       //Get result
       console.log("Andar Bahar Admin Balance:", games.andarBahar.adminBalance);
-      if (games.andarBahar.andarBet > games.andarBahar.baharBet) {
-        if (games.andarBahar.andarBet < games.andarBahar.adminBalance) {
-          games.andarBahar.adminBalance -= games.andarBahar.andarBet;
-          result = andarBet;
+      if (games.andarBahar.andar > games.andarBahar.bahar) {
+        if (games.andarBahar.andar < games.andarBahar.adminBalance) {
+          games.andarBahar.adminBalance -= games.andarBahar.andar;
+          result = andar;
         } else {
-          games.andarBahar.adminBalance -= games.andarBahar.baharBet;
-          result = baharBet;
+          games.andarBahar.adminBalance -= games.andarBahar.bahar;
+          result = bahar;
         }
       } else {
-        if (games.andarBahar.baharBet < games.andarBahar.adminBalance) {
-          games.andarBahar.adminBalance -= games.andarBahar.baharBet;
+        if (games.andarBahar.bahar < games.andarBahar.adminBalance) {
+          games.andarBahar.adminBalance -= games.andarBahar.bahar;
           result = "bahar";
         } else {
-          games.andarBahar.adminBalance -= games.andarBahar.andarBet;
+          games.andarBahar.adminBalance -= games.andarBahar.andar;
           result = "andar";
         }
       }
@@ -197,8 +198,8 @@ getResultAndarBahar = async () => {
 };
 flushAndarBahar = () => {
   transactions.andarBahar = {};
-  games.andarBahar.andarBet = 0;
-  games.andarBahar.baharBet = 0;
+  games.andarBahar.andar = 0;
+  games.andarBahar.bahar = 0;
   //centerCard = 52;
 };
 //Get Flip Pages for centerCard
@@ -347,6 +348,7 @@ sortObject = (entry) => {
 flushAll = (gameName) => {
   games[gameName].position = {};
   transactions[gameName] = {};
+
 };
 
 playParity = (position, betPoint, result) => {
