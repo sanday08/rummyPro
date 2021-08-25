@@ -58,7 +58,7 @@ io.on("connection", (socket) => {
   socket.on(
     "placeBet",
     async ({ userId, gameName, position, betPoint }) => {
-      console.log(userId, betPoint, position)
+      console.log(userId, betPoint, position, gameName)
       const result = await placeBet(userId, gameName, position, betPoint);
 
       if (result != 0) {
