@@ -130,7 +130,7 @@ setInterval(async () => {
 
   if (new Date().getTime() / 1000 > games.andarBahar.startTime + 60) {
     getResultAndarBahar();
-    // getResultAndarBahar();
+
   }
 
   //Get Admin Percentage
@@ -147,7 +147,7 @@ getResultAndarBahar = async () => {
   let result = 0;
   gameName = "andarBahar";
 
-  if (centerCard != 52) {
+  if (centerCard != 55) {
     if (games.andarBahar.andar != 0 || games.andarBahar.bahar != 0) {
       //Get result
       console.log("Andar Bahar Admin Balance:", games.andarBahar.adminBalance);
